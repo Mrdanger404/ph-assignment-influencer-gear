@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Poppins:wght@500&display=swap");
+
+:root {
+  --font-poppins: "Poppins";
+  --font-manrope: "Manrope";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+.body {
+  margin: 90px 120px;
+}
+
+header {
+  font-family: var(--font-poppins);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu-img{
+    display: none;
+}
+
+.menu h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-left: 30px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.menu img{
+    height: 24px;
+    width: 24px;
+}
+
+
+/* responsive design for mobile */
+
+@media screen and (max-width: 576px) {
+    .body{
+        margin: 35px 15px;
+    }
+
+    .menu-img{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu ul {
+        top: 100px;
+    }
+    .hidden{
+        display: none;
+    }
+    .menu-item{
+        gap: 0;
+    }
+    .menu-img:focus ~ div ul{
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-img:focus ~ div ul li.hidden{
+        display: block;  
+    }
+}
